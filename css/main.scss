@@ -1,0 +1,230 @@
+//font and color setup
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rowdies:wght@700&display=swap');
+
+//Game Colors
+$Darker_Purple: #2c2c54;
+$Dark_Purple: #40407a;
+$Purple: #474787;
+$Light_Purple: #706fd3;
+
+//Pieces colors
+$Roadster: #ff5252;
+$Pinto: #34ace0;
+$Civic: #33d9b2;
+$Player: #f7f1e3;
+$Musk: #aaa69d;
+
+//Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html {
+    background-color: $Darker_Purple;
+}
+
+//Intro Screen Styles
+#Intro_Screen {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: 'Rowdies';
+        color: $Player;
+        font-size: 400%;
+    }
+    #Rules {
+        width: 50%;
+        p {
+            font-family: 'lato';
+            font-weight: 700;
+            color: $Light_Purple;
+        }
+    }
+    #Play_Btn {
+        width: 25%;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid $Player;
+        color: $Player;
+        margin: 15px;
+        font-family: 'lato';
+        font-weight: 900;
+        font-size: 20px;
+        transition: .3s;
+        outline: none;
+        &:hover {
+            background-color: $Roadster;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+#HomeBtn_Container {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    display: none;
+    #HomeButton {
+        width: 25%;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid $Player;
+        color: $Player;
+        margin: 15px;
+        font-family: 'lato';
+        font-weight: 900;
+        font-size: 14px;
+        transition: .3s;
+        outline: none;
+        &:hover {
+            background-color: $Roadster;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+//Music Button styling
+#MusicBtns {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    #MusicBtnOn, #MusicBtnOff {
+        width: 25%;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid $Player;
+        color: $Player;
+        margin: 15px;
+        font-family: 'lato';
+        font-weight: 900;
+        font-size: 14px;
+        transition: .3s;
+        outline: none;
+        &:hover {
+            background-color: $Roadster;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+//Game notifcation stylse
+#Game_Notifications {
+    font-family: 'lato';
+    font-weight: 900;
+    font-style: italic;
+    color: $Player;
+    font-size: 150%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Game_Container Styles
+#Game_Container {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 5px;
+    .Piece {
+        width: 100%;
+        background-color: $Light_Purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $Player;
+        text-shadow: 2px 3px 3px black;
+        font-family: 'Rowdies';
+        opacity: 0.1;
+        &:hover {
+            background-color: $Purple;
+            cursor: pointer;
+        }
+    }
+    .ValidMove, .Player, .Roadster, .Pinto, .Civic, .Musk {
+        opacity: 1;
+    }
+    .Visible {
+        opacity: .5;
+        &:hover {
+            cursor: default;
+        }
+    }
+    .Roadster {
+        background-color: $Roadster;
+    }
+    .Pinto {
+        background-color: $Pinto;
+    }
+    .Civic {
+        background-color: $Civic;
+    }
+    .Musk {
+        background-color: $Musk;
+    }
+    .Player {
+        background-color: $Player;
+        &:hover {
+            background-color: $Player;
+            cursor: default;
+        }
+    }
+}
+
+//Game Over Styles
+#GameOver_Screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $Player;
+    font-size: 400%;
+    text-align: center;
+    font-family: 'rowdies';
+    p {
+        font-size: 50%;
+        font-family: 'lato';
+        font-weight: 900;
+    }
+    #PlayAgainBtn {
+        width: 25%;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid $Player;
+        color: $Player;
+        margin: 15px;
+        font-family: 'lato';
+        font-weight: 900;
+        font-size: 20px;
+        transition: .3s;
+        &:hover {
+            background-color: $Roadster;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    
+}

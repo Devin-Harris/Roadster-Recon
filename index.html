@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadster Recon</title>
+
+    <link rel="stylesheet" href="./css/styles/main.css">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./js/setup.js"></script>
+    <script defer src="./js/movement.js"></script>
+    <script defer src="./js/scoring.js"></script>
+</head>
+<body>
+
+    <div id="Intro_Screen">
+        <h1>Roadster Recon</h1>
+
+        <div id="Rules">
+            <p>
+                Welcome to the Roadster Recon. 
+                This is a simple game where your goal is to retrieve the Roadster hidden in the completely dark 15x15 warehouse and escape. 
+                The catch is Mr. Musk is sleeping somewhere in the facility. 
+                If you wake him he will start chasing you and if he catches you, you will be sent into space with the roadster, becoming "StarMan".
+                Their is also a Ford Pinto, and Honda Civic in the facility.
+                If you get into one of these cars while Musk is awake, you will be caught!
+                You may only move 1 square at a time (up, left, right, or down), and can "see" the squares in the 3x3 area with your position as the center.
+                Good luck!
+            </p>
+        </div>
+
+        <button id="Play_Btn">Play!</button>
+
+    </div>
+
+    <div id="MusicBtns">
+        <button id="MusicBtnOn">Music On</button>
+        <button id="MusicBtnOff">Music Off</button>
+    </div>
+
+    <div id="HomeBtn_Container">
+        <button id="HomeButton">Go Back</button>
+    </div>
+
+    <div id="Game_Notifications"></div>
+    <div id="Game_Container"></div>
+    
+    <div id="GameOver_Screen"></div>
+
+
+    <audio id="myAudio">
+        <source src="/green tea forest.mp3" type="audio/mpeg">
+    </audio>
+    
+
+</body>
+</html>
